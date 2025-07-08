@@ -1,5 +1,4 @@
 # Newsite-ReactJs
-Learning the fundamental of react.js
 
 ## Preview
 <img width="2875" height="1527" alt="Image" src="https://github.com/user-attachments/assets/99d0da74-cd34-41ad-8e00-df78a9771780" />
