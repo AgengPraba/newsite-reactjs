@@ -6,7 +6,7 @@ export const getNews = async ({ request }) => {
   const page = parseInt(urlParams.get("page")) || 1;
 
   // Ambil headline 1x (misal 30)
-  const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&pageSize=20&apiKey=${apiKey}`);
+  const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`);
   const data = response.data;
 
   const topHeadlines = data.articles.slice(0, 5); // 4 teratas
@@ -32,7 +32,7 @@ export const getNewsByCategory = (category) => {
     const page = parseInt(urlParams.get("page")) || 1;
 
     const response = await axios.get(
-      `https://newsapi.org/v2/top-headlines?country=us&category=${category}&pageSize=20&apiKey=${apiKey}`
+      `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apiKey}`
     );
     const data = response.data;
 
