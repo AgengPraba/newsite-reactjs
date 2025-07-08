@@ -1,13 +1,39 @@
-# React + Vite
+# Newsite-ReactJs
+Learning the fundamental of react.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Preview
+![Image](https://github.com/user-attachments/assets/54698e12-f531-4b6a-b02e-403875ef5a46)
 
-Currently, two official plugins are available:
+## Stack
+<div align="left">
+  <a href="https://react.dev/"><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/react.png" alt="React" title="React"/></a>
+  <a href="https://vite.dev/"><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/vite.png" alt="Vite" title="Vite"/></a>
+  <a href="https://tailwindcss.com/"><img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/tailwind_css.png" alt="Tailwind CSS" title="Tailwind CSS"/></a>
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
+Before running this project locally, make sure your machine has the following installed:
 
-## Expanding the ESLint configuration
+- [Node.js](https://nodejs.org/en/) — Recommended: LTS version (e.g., 20.x or newer)
+- [yarn](https://yarnpkg.com/getting-started/install) — If not installed yet, install it globally:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# newsite-reactjs
+```bash
+npm install -g yarn
+```
+
+## Get GNews API key
+[click here](https://gnews.io/dashboard)
+
+## Running Locally
+```bash
+git clone https://github.com/AgengPraba/newsite-reactjs
+cd  newsite-reactjs
+cp .env.example .env
+yarn
+yarn dev
+```
+
+## License
+1. You are free to use this code as inspiration.
+2. Please do not copy it directly.
+3. Crediting the author is appreciated.
