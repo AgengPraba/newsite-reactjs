@@ -1,4 +1,5 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const fallbackImg = "../../public/assets/missing-photo.jpg";
 import { formatDistanceToNow } from "date-fns";
@@ -14,7 +15,7 @@ function HomePage() {
           <figure>
             <img
               className="rounded-xl w-full h-64 object-cover"
-              src={topHeadlines[0]?.urlToImage || fallbackImg}
+              src={topHeadlines[0]?.image || fallbackImg}
               onError={(e) => (e.target.src = fallbackImg)}
               alt={topHeadlines[0]?.title}
             />
@@ -26,11 +27,11 @@ function HomePage() {
 
         <div className="w-full md:w-1/2 space-y-4">
           {topHeadlines.slice(1).map((article, i) => (
-            <div key={i} className="flex gap-3 items-stretch">
+            <Link to="/news/detail" state={{ article }} key={i} className="flex gap-3 items-stretch">
               <figure className="w-32 aspect-[4/3] flex-shrink-0 overflow-hidden rounded">
                 <img
                   className="object-cover w-full h-full"
-                  src={article.urlToImage || fallbackImg}
+                  src={article.image || fallbackImg}
                   onError={(e) => (e.target.src = fallbackImg)}
                   alt={article.title}
                 />
@@ -40,7 +41,7 @@ function HomePage() {
                 <div className="font-semibold text-red-700 text-sm">{ category }</div>
                 <div className="text-md font-semibold">{article.title}</div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
@@ -50,11 +51,11 @@ function HomePage() {
         <h2 className="text-2xl font-bold mb-5">Latest News</h2>
         <div className="space-y-4">
           {latestNews.map((article, i) => (
-            <div key={i} className="flex flex-col sm:flex-row gap-3 mb-5">
+            <Link to="/news/detail" state={{ article }} key={i} className="flex flex-col sm:flex-row gap-3 mb-5">
               <figure className="w-full sm:w-40 h-40 sm:h-24 flex-shrink-0 overflow-hidden rounded">
                 <img
                   className="object-cover w-full h-full"
-                  src={article.urlToImage || fallbackImg}
+                  src={article.image || fallbackImg}
                   onError={(e) => (e.target.src = fallbackImg)}
                   alt={article.title}
                 />
@@ -67,7 +68,7 @@ function HomePage() {
                 <div className="text-xl font-bold">{article.title}</div>
                 <div className="text-gray-400">{article.description}</div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

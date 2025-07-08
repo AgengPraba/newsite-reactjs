@@ -1,10 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "../layouts/RootLayout";
-import { getNews, getNewsByCategory } from "../apis/loaders";
+// import { getNews, getNewsByCategory } from "../apis/loaders";
+import { getGnews, getGnewsByCategory } from "../apis/loaders";
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import ErrorPage from "../pages/ErrorPage";
 import BlogPage from "../pages/BlogPage";
+import ContentBlogPage from "../pages/ContentBlogPage";
 
 export const router = createBrowserRouter([
   {
@@ -15,46 +17,50 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
-        loader: getNews
+        loader: getGnews
       },
       {
         path: "/about",
         element: <AboutPage />
       },
       {
+        path: "/news/detail",
+        element: <ContentBlogPage />
+      },      
+      {
         path: "/business",
         element: <BlogPage />,
-        loader: getNewsByCategory("business")
+        loader: getGnewsByCategory("business")
       },
       {
         path: "/entertainment",
         element: <BlogPage />,
-        loader: getNewsByCategory("entertainment")
+        loader: getGnewsByCategory("entertainment")
       },
       {
         path: "/general",
         element: <BlogPage />,
-        loader: getNewsByCategory("general")
+        loader: getGnewsByCategory("general")
       },
       {
         path: "/health",
         element: <BlogPage />,
-        loader: getNewsByCategory("health")
+        loader: getGnewsByCategory("health")
       },
       {
         path: "/science",
         element: <BlogPage />,
-        loader: getNewsByCategory("science")
+        loader: getGnewsByCategory("science")
       },
       {
         path: "/sports",
         element: <BlogPage />,
-        loader: getNewsByCategory("sports")
+        loader: getGnewsByCategory("sports")
       },
       {
         path: "/technology",
         element: <BlogPage />,
-        loader: getNewsByCategory("technology")
+        loader: getGnewsByCategory("technology")
       },
     ]
   },
